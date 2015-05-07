@@ -1,0 +1,13 @@
+<h1>All My Galleries</h1>
+
+<ul>
+<% @galleries.each do |gallery| %>
+	<li>
+		<%= link_to gallery.name, galleries_path(galleries) %>
+		<%= link_to 'edit', edit_gallery_path(gallery) %>
+		<%= link_to 'delete', gallery_path(gallery),method: :delete, 
+			data: {confirm: "Are you sure?"} %>
+	</li>
+	<% end %>
+</ul>
+

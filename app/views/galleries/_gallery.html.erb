@@ -1,0 +1,13 @@
+<h1>This is where people get a gallery</h1>
+
+<%= for_for @gallery do |f| %>
+
+	<%= f.label :name %>
+	<%= f.text_field :name %><br />
+
+	<%= f.label :body %>
+	<%= f.text_area :body %><br />
+
+	<%= f.submit %>
+
+<% end %>
