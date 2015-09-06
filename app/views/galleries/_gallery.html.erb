@@ -1,6 +1,10 @@
 <h1>This is where people get a gallery</h1>
 
-<%= for_for @gallery do |f| %>
+<div class="slides">
+	<div><img src="img/bird.jpg"></div>
+</div>
+
+<%= form_for @gallery do |f| %>
 
 	<%= f.label :name %>
 	<%= f.text_field :name %><br />

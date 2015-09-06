@@ -1,3 +1,3 @@
 class Gallery < ActiveRecord::Base
-	has_many :users
+	belongs_to :user
 end
