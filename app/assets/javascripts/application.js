@@ -11,7 +11,25 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery.slick
 //= require jquery_ujs
+//= require jquery.slick
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+  $('.multiple-items').slick({
+    dots: true,
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 3
+  });
+});
+
+
+$('.multiple-items').slick({
+  dots: true,
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 3
+});
+								

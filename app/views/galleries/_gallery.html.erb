@@ -1,11 +1,9 @@
-<h1>This is where people get a gallery</h1>
 
-<div class="slides">
+<!--<div class="slides">
 	<div><img src="img/bird.jpg"></div>
-</div>
+</div>!!-->
 
-<%= form_for @gallery do |f| %>
-
+<%= form_for @galleries.new do |f| %>
 	<%= f.label :name %>
 	<%= f.text_field :name %><br />
 
@@ -13,5 +11,24 @@
 	<%= f.text_area :body %><br />
 
 	<%= f.submit %>
-
 <% end %>
+
+
+
+
+<!--<div class="multiple-items">
+<div><img src="assets/images/DSC00448.JPG" alt=""></div>
+<div><img src="assets/images/DSC00471.JPG" alt=""></div>
+<div><img src="assets/images/DSC00473.JPG" alt=""></div>
+<div><img src="assets/images/DSC00475.JPG" alt=""></div>
+<div><img src="assets/images/DSC00476.JPG" alt=""></div>
+<div><img src="assets/images/DSC00477.JPG" alt=""></div>
+</div>!-->
+<div class="multiple-items">
+<a href="/"><img src="<%= asset_path('DSC00448.JPG') %>"
+<a href="/"><img src="<%= asset_path('DSC00473.JPG') %>"
+<a href="/"><img src="<%= asset_path('DSC00475.JPG') %>"
+<a href="/"><img src="<%= asset_path('DSC00476.JPG') %>"
+<a href="/"><img src="<%= asset_path('DSC00477.JPG') %>"
+</div>
+

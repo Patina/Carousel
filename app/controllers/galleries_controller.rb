@@ -18,7 +18,7 @@ class GalleriesController < ApplicationController
   def create
     @gallery = Gallery.create(params[:gallery])
     if gallery.save
-      redirect_to @gallery,notice: "New gallery created."
+      redirect_to @gallery, notice: "New gallery created."
     else
       render :new
     end
@@ -34,13 +34,14 @@ class GalleriesController < ApplicationController
   def destroy
   end
 
+private
 
 def set_gallery
   @gallery = Gallery.find(params[:id])
   end
 
   def gallery_params
-    params.require(:gallery).permit(:name, :body)
+    params.require(:gallery).permit(:name, :body, :user_id)
   end
 end
 
