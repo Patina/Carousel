@@ -16,20 +16,13 @@
 //= require turbolinks
 //= require_tree .
 
+
 $(document).ready(function(){
-  $('.multiple-items').slick({
-    dots: true,
-  infinite: true,
-  slidesToShow: 3,
-  slidesToScroll: 3
-  });
-});
+  alert("working");
+  }
+);
 
 
-$('.multiple-items').slick({
-  dots: true,
-  infinite: true,
-  slidesToShow: 3,
-  slidesToScroll: 3
-});
+
+        
 								
