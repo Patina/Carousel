@@ -1,4 +1,4 @@
-  # encoding: UTF-8
+# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150922001628) do
+ActiveRecord::Schema.define(version: 20150928155539) do
 
   create_table "galleries", force: :cascade do |t|
     t.string   "name"
@@ -24,8 +24,12 @@ ActiveRecord::Schema.define(version: 20150922001628) do
   create_table "images", force: :cascade do |t|
     t.string   "caption"
     t.integer  "gallery_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   create_table "users", force: :cascade do |t|

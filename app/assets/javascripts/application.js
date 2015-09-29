@@ -17,10 +17,11 @@
 //= require_tree .
 
 
+
 $(document).ready(function(){
   alert("working");
   }
-);
+  );
 
 
 

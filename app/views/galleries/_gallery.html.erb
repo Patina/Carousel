@@ -12,7 +12,11 @@
 	<%= f.text_area :body %><br />
 
 	<%= f.submit %>
-<% end %>
+<% end %></br>
+
+<%= form_for Image.new, url: images_path, html: { multipart: true } do |form| %>
+  <%= form.file_field :avatar %>
+<% end %></br>
 
 
 
@@ -27,9 +31,6 @@
 	<div><img src="<%= asset_path('DSC00476.JPG') %>"></div>
 </div>
 
-<script>$('.multiple-items').slick({
-  dots: true,
-  infinite: true,
-  slidesToShow: 1,
-  slidesToScroll: 1
-});</script>
+
+
+
