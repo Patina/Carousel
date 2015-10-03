@@ -9,13 +9,14 @@
 	<%= f.text_field :name %><br />
 
 	<%= f.label :body %>
-	<%= f.text_area :body %><br />
+	<%= f.text_area :body %><br /><br />
 
 	<%= f.submit %>
-<% end %></br>
+<% end %></br></br>
 
-<%= form_for Image.new, url: images_path, html: { multipart: true } do |form| %>
-  <%= form.file_field :avatar %>
+<%= form_for Image.new, url: images_path, html: { multipart: true } do |f| %>
+  <%= f.file_field :avatar %></br></br>
+  <%= f.submit "Save" %>
 <% end %></br>
 
 

@@ -16,13 +16,22 @@ class ImagesController < ApplicationController
   end
 
   def create
-    @image = Image.create(params[:image])
-    if @image.save #shoud it be image? and not @image??
+    @image = Image.new(image_params)
+    if @image.save 
       redirect_to @image, notice: "New picture created."
     else 
       render :new
     end
   end
+
+  #def create
+   # @image = Image.create(params[:image])
+    #if @image.save 
+      #redirect_to @image, notice: "New picture created."
+    #else 
+      #render :new
+    #end
+  #end
 
   def update
     @image = Image.update(params[:image])
